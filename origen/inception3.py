@@ -140,7 +140,7 @@ def mensaje_final():
 # --- EJECUCIÓN ---
 limpiar_pantalla()
 
-escribir_glitch("\n [Esto es una prueba]",0.05,green)
+#escribir_glitch("\n [Esto es una prueba]",0.05,green)
 
 animacion_inicio()
 escribir_lento(f"{green}[+] Fragmentos de memoria perdidos en el tiempo...{reset}")

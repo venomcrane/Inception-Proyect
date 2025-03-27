@@ -9,7 +9,7 @@ import signal
 # Colores ANSI para efectos visuales
 green = "\033[92m"
 cyan = "\033[96m"
-rojo = "\033[91m"
+red = "\033[91m"
 amarillo = "\033[93m"
 magenta = "\033[95m"
 reset = "\033[0m"
@@ -17,7 +17,7 @@ bold = "\033[1m"
 
 # Manejo de Ctrl+C para salida dramática
 def leaving(sig, frame):
-    print(f"\n\n{rojo}[!] TERMINANDO PROCESO ...\n{reset}")
+    print(f"\n\n{red}[!] TERMINANDO PROCESO ...\n{reset}")
     sys.exit(1)
 
 signal.signal(signal.SIGINT, leaving)
@@ -34,7 +34,7 @@ def interferencia():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 # Efecto de texto glitch
-def escribir_glitch(texto, delay=0.05, color=green, end="\n"):
+def escribir_glitch(texto, delay=0.25, color=green, end="\n"):
     """Muestra un efecto de letras aleatorias que se convierten en la frase final."""
     sys.stdout.write(color)
     sys.stdout.flush()
@@ -105,9 +105,8 @@ def nivel_desordenado():
         "Sin el tiempo los arboles no serian fuertes no crees?",
         "Y sin el tiempo serian tan breves y efimeros como las hojas que se lleva el viento",
         "El mundo no desaparece cuando cierras los ojos... o si?",
-        "Contigo puedo sser yo mismo..."
+        "Contigo puedo ser yo mismo..."
     ]
-    random.shuffle(pistas)
     for pista in pistas:
         fragmento_memoria(pista)
 
@@ -127,7 +126,7 @@ def mensaje_final():
     escribir_lento(f"{amarillo}La vida esta llena de decisiones, la mas minima puede cambiarlo todo{reset}")
     escribir_lento(f"{amarillo}Una sola decision lo cambio todo...{reset}")
     time.sleep(2)
-    escribir_lento(f"\n{cyan}La verdad esta aun mas cerca: {reset}")
+    escribir_lento(f"\n{cyan}La verdad esta cerca: {reset}")
     escribir_glitch("aHR0cHM6Ly93d3cueW91dHViZS5jb20vZmluYWxfbWVuc2FqZV9tZW1vcnk=")
 
 # --- EJECUCIÓN ---
@@ -145,4 +144,4 @@ time.sleep(1)
 nivel_base64()
 time.sleep(1)
 mensaje_final()
-print(f"{red}\t\t\t--- Fin del Programa --- {reset}")
+print(f"{red}\t\t\t--- Fin del nivel 1 --- {reset}")

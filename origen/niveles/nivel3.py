@@ -127,7 +127,7 @@ def escribir_glitch(texto, delay=0.10, color=green, end="\n"):
 
 
 # Texto con pausa para generar intriga
-def escribir_lento(texto, delay=0.20, color=green, end="\n"):
+def escribir_lento(texto, delay=0.07, color=green, end="\n"):
     sys.stdout.write(color)
     for char in texto:
         sys.stdout.write(char)
@@ -277,13 +277,7 @@ def main():
     song()
     time.sleep(6)
     print(f"{red}==============================[::] FIN DEL PROGRAMA [::]================================")
-    time.sleep(7)
-    animacion_puntos()
-    animacion_puntos()
-    animacion_puntos()
-    time.sleep(4)
-    escribir_glitch("[FINAL/INICIO SECRETO]: ZmluYWwgc2VjcmV0bwo= ")
-    
+    time.sleep(7)    
 
 if __name__ == "__main__":  
     main()

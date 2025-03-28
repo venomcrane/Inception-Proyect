@@ -34,7 +34,7 @@ def interferencia():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 # Efecto de texto glitch
-def escribir_glitch(texto, delay=0.25, color=green, end="\n"):
+def escribir_glitch(texto, delay=0.05, color=green, end="\n"):
     """Muestra un efecto de letras aleatorias que se convierten en la frase final."""
     sys.stdout.write(color)
     sys.stdout.flush()
@@ -127,7 +127,7 @@ def mensaje_final():
     escribir_lento(f"{amarillo}Una sola decision lo cambio todo...{reset}")
     time.sleep(2)
     escribir_lento(f"\n{cyan}La verdad esta cerca: {reset}")
-    escribir_glitch("aHR0cHM6Ly93d3cueW91dHViZS5jb20vZmluYWxfbWVuc2FqZV9tZW1vcnk=")
+    escribir_glitch("RHJlYW0gLSBMZXZlbCAyIC0+IGh0dHBzOi8vYXNjaWluZW1hLm9yZy9hL2tQZnBHQUdyUHNIb3U0QTdPMzlNUlRIbUIK")
 
 # --- EJECUCIÓN ---
 print(f"{cyan}========================")

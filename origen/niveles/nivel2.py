@@ -67,7 +67,7 @@ def escribir_glitch(texto, delay=0.10, color=green, end="\n"):
 
 
 # Texto con pausa para generar intriga
-def escribir_lento(texto, delay=0.15, color=green, end="\n"):
+def escribir_lento(texto, delay=0.10, color=green, end="\n"):
     sys.stdout.write(color)
     for char in texto:
         sys.stdout.write(char)
@@ -144,7 +144,7 @@ def reset_memoria():
 
     escribir_glitch("\n[Codigo Cifrado]: xXXxxXxXxXxXxX", 0.10, magenta)
     time.sleep(1)
-    escribir_glitch("\n[Codigo Cifrado]: naHR0cDovL2VubGFjZS9uaXZlbDMK", 0.10, magenta)
+    escribir_glitch("\n[Codigo Cifrado]: RW5kIG9mIFRoZSBSb2FkLT4gaHR0cHM6Ly9hc2NpaW5lbWEub3JnL2EvQjFBVUJOZjZIbGNUZlc1VEt1eWtIQ0pzRwo=", 0.10, magenta)
 
     escribir_lento("La respuesta está aquí...en la ultima linea ")
     time.sleep(2)
@@ -170,12 +170,7 @@ def main():
     escribir_lento("No, no recites las palabras")
     mas_lento("Cierra los ojos, recuerdalo y sientelo")
     escribir_lento("Puedes pausar esto si quieres")
-    animacion_puntos()
-    time.sleep(2)
-    escribir_lento('''
-    "Espero que veas cosas que te asombren, espero que sientas cosas que nunca habías sentido, 
-    espero que conozcas gente con otro punto de vista espero que vivas una vida de la que estés orgullosa. 
-    ...Y si descubres que no lo estás, espero que tengas la fortaleza para volver a empezar de nuevo". -El Curioso Caso de Benjamin Button''')
+    animacion_puntos() 
     time.sleep(2)
     mas_lento("Puedes seguir...")
     escribir_lento("Y jama-")
